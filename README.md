@@ -1,3 +1,3 @@
-# Nama : Clara Diva Paramitha
-# NPM : 20081010097
-# Kelas : Riset Informatika D081
+# Nama : Clara Diva Paramitha <br>
+NPM : 20081010097 <br>
+Kelas : Riset Informatika D081 <br>
