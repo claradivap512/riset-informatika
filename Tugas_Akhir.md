@@ -33,6 +33,9 @@ l.	country: Negara asal film
    
    Proses ini dilakukan agar dataset tidak menghambat proses pembelajaran algoritma. Proses yang diterapkan dalam eksperimen ini adalah penghapusan nilai _null_. Pada kasus dataset ini, ditemukan bahwa ada banyak detail data yang terpisah _cell_ sehingga dianggap tidak lengkap atau _null_. Dari 10179, terdapat 162 _cell_ dengan data yang tidak lengkap, sehingga jumlah total akhir dataset adalah 10017 baris data. Perbandingan sampling untuk _data training_ dan _testing_ yaitu sebesar 80:20.
 
+5. Pengujian
+   Proses pengujian memanfaatkan 80% data untuk _training_ dan 20% data untuk _testing_. Hanya ada dua kategori untuk output, yaitu 0 dan 1. Syarat sebuah film dianggap sukses yaitu memiliki skor IMDb di atas 60.0 dan pendapatan _Box Office_ dua kali lipat daripada anggaran (_budget_).
+
 ## Referensi
 [Perbandingan Metode Klasifikasi Random Forest dan SVM Pada Analisis Sentimen PSBB](https://www.researchgate.net/publication/352278601_Perbandingan_Metode_Klasifikasi_Random_Forest_dan_SVM_Pada_Analisis_Sentimen_PSBB)
 
