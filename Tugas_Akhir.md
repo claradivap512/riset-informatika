@@ -10,31 +10,46 @@ Metode ini memanfaatkan algoritma klasifikasi Random Forest Classifier yang dise
 1. Random Forest
 
    Random Forest merupakan metode dalam machine learning yang menggunakan konsep ensemble learning dengan membuat banyak pohon keputusan yang bekerja secara independen. Tiap pohon dalam kumpulan tersebut bertugas melakukan prediksi, dan hasil prediksi dari seluruh pohon digabungkan untuk menghasilkan prediksi akhir.
-  Random Forest merupakan metode yang dikembangkan dari _Classification and Regression Trees_ (CART), yang pada umumnya menghasilkan suatu _decision tree_. Sebuah _tree_ dalam CART model biasanya tidak cukup mumpuni untuk melakukan analisis _big data_ yang memiliki banyak faktor. Oleh karena itu, dibutuhkan lebih dari satu _tree_ untuk menangani tiap-tiap faktor sehingga didapatkan sebuah ‘hutan’ atau _forest_ yang mampu memberikan hasil prediksi yang lebih akurat. 
-  Untuk menghasilkan banyak _tree_, dilakukan teknik pemilihan sampel secara acak atau randomization dan memastikan bahwa untuk tiap _tree_ tidak menggunakan sampel yang sama. _Output_ banyak _tree_ ini disatukan atau diterapkan _aggregation_, dengan cara _voting_ apabila permasalahannya adalah klasifikasi, atau perata-rataan (_averaging_), apabila permasalahannya adalah regresi hingga didapatkan satu _output_
+
+   Random Forest merupakan metode yang dikembangkan dari _Classification and Regression Trees_ (CART), yang pada umumnya menghasilkan suatu _decision tree_. Sebuah _tree_ dalam CART model biasanya tidak cukup mumpuni untuk melakukan analisis _big data_ yang memiliki banyak faktor. Oleh karena itu, dibutuhkan lebih dari satu _tree_ untuk menangani tiap-tiap faktor sehingga didapatkan sebuah ‘hutan’ atau _forest_ yang mampu memberikan hasil prediksi yang lebih akurat. 
+
+   Untuk menghasilkan banyak _tree_, dilakukan teknik pemilihan sampel secara acak atau randomization dan memastikan bahwa untuk tiap _tree_ tidak menggunakan sampel yang sama. _Output_ banyak _tree_ ini disatukan atau diterapkan _aggregation_, dengan cara _voting_ apabila permasalahannya adalah klasifikasi, atau perata-rataan (_averaging_), apabila permasalahannya adalah regresi hingga didapatkan satu _output_
 
 3.	Pemilihan data
 
   	Terpilihnya dataset ‘IMDB movies dataset’ didasarkan pada alasan bahwa dataset ini menyediakan tiga poin utama yang menjadi fokus sekaligus faktor pembelajaran bagi mesin, yaitu anggaran atau _budget_, pendapatan atau _revenue_, serta skor atau _score_ yang diambil dari basis data IMDB itu sendiri. Jumlah total yaitu sebanyak 10179 data dengan atribut-atribut sebanyak 12 atribut dengan detail sebagai berikut:
-a.	names: Judul film dalam Bahasa Inggris
-b.	date_x: Tanggal rilis film 
-c.	score: Skor atau rating IMDb
-d.	genre: Kategori film
-e.	overview: Sinopsis film
-f.	crew: Pemain dan kru-kru penting dari film
-g.	orig_title: Judul asli (apabila film adalah _non-English_)
-h.	status: Status film, apakah sudah atau masih berada di tahap pra-produksi
-i.	orig_lang: Bahasa asli film (apabila film adalah _non-English_)
-j.	budget_x: Anggaran total yang dikeluarkan
-k.	revenue: Pendapatan _Box Office_
-l.	country: Negara asal film 
+  	
+         a.	names: Judul film dalam Bahasa Inggris
+     	
+         b.	date_x: Tanggal rilis film
+     	 
+         c.	score: Skor atau rating IMDb
+     	
+         d.	genre: Kategori film
+     	
+         e.	overview: Sinopsis film
+     	
+         f.	crew: Pemain dan kru-kru penting dari film
+     	
+         g.	orig_title: Judul asli (apabila film adalah _non-English_)
+     	
+         h.	status: Status film, apakah sudah atau masih berada di tahap pra-produksi
+     	
+         i.	orig_lang: Bahasa asli film (apabila film adalah _non-English_)
+     	
+         j.	budget_x: Anggaran total yang dikeluarkan
+     	
+         k.	revenue: Pendapatan _Box Office_
+     	
+         l.	country: Negara asal film 
 
-4.	Pre-processing Data
-   
-   Proses ini dilakukan agar dataset tidak menghambat proses pembelajaran algoritma. Proses yang diterapkan dalam eksperimen ini adalah penghapusan nilai _null_. Pada kasus dataset ini, ditemukan bahwa ada banyak detail data yang terpisah _cell_ sehingga dianggap tidak lengkap atau _null_. Dari 10179, terdapat 162 _cell_ dengan data yang tidak lengkap, sehingga jumlah total akhir dataset adalah 10017 baris data. Perbandingan sampling untuk _data training_ dan _testing_ yaitu sebesar 80:20.
+5.	Pre-processing Data
 
-5. Pengujian
-   Proses pengujian memanfaatkan 80% data untuk _training_ dan 20% data untuk _testing_. Hanya ada dua kategori untuk output, yaitu 0 dan 1. Syarat sebuah film dianggap sukses yaitu memiliki skor IMDb di atas 60.0 dan pendapatan _Box Office_ dua kali lipat daripada anggaran (_budget_).
+      Proses ini dilakukan agar dataset tidak menghambat proses pembelajaran algoritma. Proses yang diterapkan dalam eksperimen ini adalah penghapusan nilai _null_. Pada kasus dataset ini, ditemukan bahwa ada banyak detail data yang terpisah _cell_ sehingga dianggap tidak lengkap atau _null_. Dari 10179, terdapat 162 _cell_ dengan data yang tidak lengkap, sehingga jumlah total akhir dataset adalah 10017 baris data. Perbandingan sampling untuk _data training_ dan _testing_ yaitu sebesar 80:20.
+
+7. Pengujian
+
+      Proses pengujian memanfaatkan 80% data untuk _training_ dan 20% data untuk _testing_. Hanya ada dua kategori untuk output, yaitu 0 dan 1. Syarat sebuah film dianggap sukses yaitu memiliki skor IMDb di atas 60.0 dan pendapatan _Box Office_ sebesar dua kali lipat daripada anggaran (_budget_).
 
 ## Referensi
 [Perbandingan Metode Klasifikasi Random Forest dan SVM Pada Analisis Sentimen PSBB](https://www.researchgate.net/publication/352278601_Perbandingan_Metode_Klasifikasi_Random_Forest_dan_SVM_Pada_Analisis_Sentimen_PSBB)
